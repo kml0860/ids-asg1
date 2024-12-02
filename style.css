@@ -98,7 +98,7 @@ form label {
     margin-bottom: 0.5rem;
     font-weight: bold;
 }
-form input {
+form input, form select {
     width: 80%;
     padding: 0.8rem;
     margin-bottom: 1rem;
