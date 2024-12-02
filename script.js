@@ -100,3 +100,14 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
+
+document.querySelectorAll('.service-btn').forEach(button => {
+    button.addEventListener('focus', () => {
+        const dropdown = button.nextElementSibling;
+        dropdown.style.display = 'block';
+    });
+    button.addEventListener('blur', () => {
+        const dropdown = button.nextElementSibling;
+        dropdown.style.display = 'none';
+    });
+});

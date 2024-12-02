@@ -214,3 +214,78 @@ form button:hover {
   from {opacity: .4}
   to {opacity: 1}
 }
+
+/* Services List Container */
+.services-list {
+    list-style: none;
+    padding: 100px;
+    margin: 3rem auto; /* Add top margin to push buttons down */
+    max-width: 600px;
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center; /* Center buttons horizontally */
+    gap: 1rem; /* Add space between buttons */
+}
+
+.services-list li {
+    margin: 1.5rem 0;
+    position: relative; /* Establish positioning context for dropdown */
+}
+
+/* Buttons */
+.service-btn {
+    width: 100%; /* Full width within the container */
+    max-width: 300px; /* Restrict maximum button size */
+    padding: 1rem;
+    background: linear-gradient(90deg, #4a00e0, #8e2de2);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    text-align: center;
+}
+
+.service-btn:hover {
+    background: #4dd0e1; /* Highlight on hover */
+}
+
+/* Dropdown Styling */
+.dropdown {
+    display: none; /* Hidden by default */
+    position: absolute;
+    bottom: calc(100% + 10px); /* Position above the button */
+    left: 50%; /* Center the dropdown horizontally */
+    transform: translateX(-50%) translateY(10px);
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    padding: 1rem;
+    z-index: 10;
+    text-align: center;
+    opacity: 0; /* Transparent by default */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth fade-in */
+}
+
+.dropdown img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+}
+
+.dropdown p {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Show Dropdown on Hover */
+.services-list li:hover .dropdown {
+    display: block; /* Make dropdown visible */
+    opacity: 1; /* Fade-in effect */
+    transform: translateX(-50%) translateY(0); /* Move into position */
+}
